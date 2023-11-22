@@ -14,9 +14,11 @@ func _process(delta):
 
 
 func game_over():
-	pass # Replace with function body.
+	$ScoreTimer.stop()
+	$MobTimer.stop()
 
 
 func new_game():
 	score = 0
 	$Player.start($StartPosition.position)
+	$StartTime.start()
